@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validación del Certificado — 000144243</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+/* Variables de Color */
+:root {
+    --header-dark: #363d4a; 
+    --button-preview: #6495ED; 
+    --button-new: #4876b6; 
+    --bg: #ffffff;
+    --text-dark: #333;
+    --text-muted: #6b7280;
+}
+
+* { box-sizing: border-box; }
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-dark);
+}
+
+/* --- HEADER --- */
+header.site-header {
+    background: var(--header-dark);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header .brand h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+header .socials {
+    display: flex;
+    gap: 12px;
+}
+
+header .socials a {
+    color: white;
+    font-size: 20px;
+}
+
+/* --- MAIN CONTAINER --- */
+main.container {
+    margin: 0;
+    padding: 0 40px; 
+}
+
+/* TÍTULO */
+h1.title {
+    font-size: 22px; 
+    font-weight: 600; 
+    margin-top: 40px; 
+    margin-bottom: 0; 
+    text-align: left; 
+    color: var(--text-dark);
+}
+
+/* Contenedor que simula la posición de los datos en tu pantalla */
+.data-container {
+    /* Mantenemos el empuje vertical */
+    margin-top: 100px;
+    /* Ancho total del bloque que contiene etiqueta y valor */
+    max-width: 600px; 
+    /* Alinea el bloque completo a la izquierda de la página */
+    text-align: left; 
+}
+
+/* BLOQUE DE DATOS: Alineación izquierda de las dos columnas */
+.grid-rows {
+    display: flex; 
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.row {
+    display: flex;
+    /* Alinea el contenido interno a la izquierda */
+    justify-content: flex-start; 
+    width: 100%;
+}
+
+.row strong {
+    font-weight: 400; 
+    /* Ancho fijo para las etiquetas */
+    width: 180px; 
+    text-align: left; 
+    flex-shrink: 0; 
+}
+
+.value {
+    /* CRÍTICO: Este margen empuja el valor a la posición deseada */
+    margin-left: 200px; 
+    /* Asegura que el texto del valor se alinee a la izquierda bajo ese punto de inicio */
+    text-align: left; 
+    white-space: nowrap;
+    flex-grow: 1; 
+}
+
+/* --- BOTONES --- */
+.actions {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    padding: 8px 18px; 
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    transition: opacity 0.2s ease;
+}
+
+.btn.preview { background: var(--button-preview); }
+.btn.new { background: var(--button-new); }
+
+/* --- FOOTER --- */
+footer.small {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 100px 0 10px; 
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 12px;
+}
+footer.small p {
+    margin: 4px 0 0;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <h2>Polimático</h2> 
+    </div>
+    <div class="socials">
+        <a href="https://www.facebook.com/ESPOL/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/espol" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/espolteinstein/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/school/espol/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:gerenciatecnologia@espol.edu.ec"><i class="fas fa-envelope"></i></a>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="title">Validación del certificado</h1>
+
+    <div class="data-container">
+        <div class="grid-rows">
+            <div class="row"><strong>Certificado:</strong><div class="value">000144243</div></div>
+            <div class="row"><strong>Fecha emisión:</strong><div class="value">24/09/2025</div></div>
+            <div class="row"><strong>Válido hasta:</strong><div class="value">25/10/2025</div></div>
+            <div class="row"><strong>Identificación:</strong><div class="value">202102042</div></div>
+            <div class="row"><strong>Estudiante:</strong><div class="value">ARELLANO RIVERA MELANIE MARCELA</div></div>
+            <div class="row"><strong>Estado del certificado:</strong><div class="value">Listo para ser descargado</div></div>
+        </div>
+
+        <div class="actions">
+            <button class="btn preview" id="btnVer">Vista previa</button>
+            <button class="btn new" onclick="location.reload();">Nueva Consulta</button>
+        </div>
+    </div>
+</main>
+
+<footer class="small">
+    Derechos Reservados Gerencia de Tecnologías y Sistemas de Información © 2025<br>
+    Escuela Superior Politécnica del Litoral - Guayaquil - Ecuador Campus Gustavo Galindo
+    <p>
+        Correo: <a href="mailto:gerenciatecnologia@espol.edu.ec" style="color: #4876b6; text-decoration: none;">gerenciatecnologia@espol.edu.ec</a>
+    </p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // *** NOMBRE DE ARCHIVO SOLICITADO ACTUALIZADO ***
+    const pdfFileName = "certificado_en_ingles_000144243.pdf"; 
+    
+    const pdfUrl = encodeURI(pdfFileName);
+    const btnVer = document.getElementById('btnVer');
+
+    if (btnVer) {
+        btnVer.addEventListener('click', () => {
+            window.open(pdfUrl, '_blank');
+            
+            // Mensaje de prueba para ayudar a la depuración si el PDF no abre
+            setTimeout(() => {
+                if (!window.closed && (window.innerWidth == 0 || !document.hasFocus())) {
+                     // El chequeo es complejo, mejor dejar el alert simple para confirmación de funcionalidad
+                     // alert("El botón 'Vista previa' funciona. Si no se abre el PDF, verifica que el archivo '" + pdfFileName + "' esté en la misma carpeta que este HTML.");
+                }
+            }, 500);
+        });
+    }
+});
+</script>
+</body>
+</html>
+```
